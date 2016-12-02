@@ -1,57 +1,36 @@
 # CDTM-Backend-Workshop
 
-## Introduction
-This repository contains everything to conduct a 'Basics Of Backend Development' Workshop targeting people with limited programming experience. In order to successfully use the content provided in this repository, please read the following instructions.
+For many the term 'Backend-Development' is synonymous to a big black box. The goal of this workshop to shed light on said black box and convey a basics set of shared vocabulary and understanding around the field of Backend-Development for people with limited programming experience.
 
-I want to ...
-  2. [host a workshop and teach others the 'Basics Of Backend Development'](#1-host-a-workshop)
-  1. [do this course just for myself](#2-do-this-course-privately)
-  
+This workshop combines theoretical input lessons with practical programming exercises to build a solid understanding of the taught content. During the course the students will be guided through developing a backend application for a 'Todo-Application'.
 
+## Workshop Structure
 
-## 1 Host a workshop 
-**IMPORTANT:** This repository is the initial point for conducting a backend workshop with a class of students. It is important that you **DO NOT MODIFY** the repository itself. Instead follow these steps:
+In order to make the content of this workshop easily accessible to you we put most of it straight into the Wiki of this repository. Additionally we will gradually publish slides with additional input.
 
-### Workflow
-1. Either fork or duplicate this repository
-   * Fork: Just press the button. 
-   * Duplicate
-        1. Mirror the repository according to [Mirroring a repository](https://help.github.com/articles/duplicating-a-repository/#mirroring-a-repository)
-        2. Duplicate the wiki
-           1. Create a wiki page for your new repository
-           2. Clone this repository's wiki repository: `git clone https://github.com/FroeMic/CDTM-Backend-Course.wiki.git`
-           3. Force push the wiki repository to your new repository's wiki repository: `cd CDTM-Backend-Course.wiki` and `git push --force https://github.com/YOURUSERNAME/YOURNEWREPOSITORYNAME.wiki.git` 
-2. Prepare repository for students
-    1. Checkout both the 'master' and 'solution' branch on your local machine
-    2. Force delete the remote 'solution' branch (don't delete the branch in your local copy)
-3. Let students fork your new repository. The will only see the 'master' branch
-4. Let the students add your repository's master branch as 'upstream' 
-  * Sourcetree Instructions:
-      1. Open your forked repo in SourceTree.
-      2. Select Repository ➫ Repository Settings… in the menu (or press ⇧⌘,).
-      3. In the Remotes pane, press Add.
-      4. Enter any name you like (often upstream or master) and the URL / path to the parent repo.
-      5. Press OK, then OK.
-  * Git Console:
-      * https://help.github.com/articles/configuring-a-remote-for-a-fork/
-5. Everytime you want to publish a step to the students, merge the specific commit from you **local** 'solution' branch into 'master' and push your changes.
-6. For the students to receive the changes, let them pull from upstream
-  * Sourcetree:
-        1. Select 'upstream' from 'pull from repository' dropdown
-        2. Select 'master' from 'pull from repository' dropdown
-        3. Press ok
-  * Git console:
-        * https://help.github.com/articles/syncing-a-fork/
-  
- **IMORTANT:** For this to work, the students should only work in the folders specified in the exercise instructions.
+### Repository Structure
 
-## 2. Do this course privately
-  Please follow the following steps to go trough the workshop
-### Workflow
-  1. Fork this repository
-  2. Check out the master branch of your forked repository locally (e.g. with SourceTree)
-  3. For each Tag in the 'solution' branch, beginning with the earliest one
-    1. Merge the commit with the respective tag into your 'master' branch
-    2. Go through the newly provided lecture material and follow the exercise instructions
-    3. Merge the next tagged commit (solution) to get the demo code.
-    4. Repeat :-)
+The repository structure will look as follows. Please note that there are certain guideline to follow, in order to avoid problems throughout the workshop.
+
+1. Only modify files which are inside the `/src` folder
+2. Do not modify anything within the `/src/server/static` folder
+
+```
+.
++-- README.md
++-- slides/                         (lecture slides)
++-- src/                            (YOUR CODE)
+|   +-- exercises/                  (single exercises will go here)
+    |   +-- exerciseXYZ/            
+    |   +-- .../            
+|   +-- server/                     (your server implementation)
+    |   +-- server.py               
+    |   +-- static/                 (frontend -> don't modify)  
+    |   +-- ...
++-- solutions/                      (solutions will be publish here)
+|   +-- server/                     (solutions for each step of the server)
+    |   +-- server-01-description   
+    |   +-- ...
+```
+
+We will explain more in time. Happy coding :-)
