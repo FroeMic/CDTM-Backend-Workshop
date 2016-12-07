@@ -12,7 +12,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 myList = List('Inbox', id='0')
-myList.tasks = [
+myTasks = [
     Task('Think about lunch', '0', id='0', status = Task.COMPLETED),
     Task('Become a pro in backend development', '0', status= Task.NORMAL),
     Task('CONQUER THE WORLD!', '0', status = Task.NORMAL)
